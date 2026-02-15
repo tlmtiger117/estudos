@@ -1,2 +1,2 @@
 # estudos
-lugar onde vou mostrar oque esotu estudando no momento.
+lugar onde vou mostrar oque estou estudando no momento.
