@@ -1,5 +1,5 @@
 # 20/02/26
-# ---------------------------Criando Rede Inetrna Virtual com Sub-Redes---------------------------------------
+#|---------------------------Criando Rede Inetrna Virtual com Sub-Redes--------------------------------------|
 
 Fluxo do funcionamento da rede virtual inetrna:
 
@@ -25,7 +25,7 @@ Fluxo do funcionamento da rede virtual inetrna:
 
                   
 
-|------------------------Arquivos de configuração de rede e explicação simples das VMS------------------------|
+|------------------------Arquivos de configuração de rede e explicação simples dasVMS------------------------|
 
 1-(METASPOTABLE): VM vulneravel propositalmente, utilizada para testes de segurança/redes.
 
