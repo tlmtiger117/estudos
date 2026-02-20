@@ -53,10 +53,19 @@ Fluxo do funcionamento da rede virtual inetrna:
   - isso é nencessário para o roteador fazer o repasse de dados entre redes. sem isso, não tem como repassar
      as informações.
 
+- Minhas dificuldades: Em relação a esse projeto, eu tive dificuldades na parte dos Adaptadores de rede e no
+   roteador. lembro de tenatr fazer uma configuração de sub_rede mas sem ter uma VM específica pra isso.
+   a soluçaõ que tive foi pesquisar um pouco usando IA(potencial absurdo se usado do jeito certo) pra tirar
+   dúvidas e propor soluções pra minha realidade. foi aí que cheguei na comclusão de que os probleas estavam
+   nos Adaptadores de rede(roteador apeans com 1, mas é necessário 2 pro repasse de dados) e no rotedor
+   (configurações de rede e ips erradas,dhcp automático e tipo de rede errado/trocados).
+   Acho que se eu tiver esse mesmo problemas hoje em dia, conseguiria resolver em 1 a 2 horas.
+                  
+
 Resumo: Configure as VMS cleintes em redes diferentes
-        - tenha uma VM específica pro roteamento
-        - roteador com 2 adaptadores de rede/interface(da cliente 1 e 2)
-        - teste e salve com snapshots em todas as VMs.
+      - tenha uma VM específica pro roteamento
+      - roteador com 2 adaptadores de rede/interface(da cliente 1 e 2)
+      - teste e salve com snapshots em todas as VMs.
     
   
                    
