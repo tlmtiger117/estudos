@@ -1,0 +1,69 @@
+# 20/02/26
+# ---------------------------Criando Rede Inetrna Virtual com Sub-Redes---------------------------------------
+
+Fluxo do funcionamento da rede virtual inetrna:
+
+   LAN_1 (Metaspotable)                       LAN_2(ubuntu server)                            
++------------------------+                  +------------------------+
+|rede: enp0s3            |                  | rede: enp0s8           |
+| host: 192.168.1.2      |                  | host: 192.168.2.1      |
+| máscara: 255.255.255.0 |                  | máscara: 255.255.255.0 |
+| gateway: 192.168.1.1   |                  | gateway: 192.168.2.1   |
++------------------------+                  +------------------------+
+                          \                 /
+                           \               /
+                            \             /
+                             \           /
+                              \         /
+                   VM roteador/gateway(ubunto server)
+                  +----------------------------------+
+                  |      faz parte das 2 redes       |
+                  |                                  |
+                  |         LAN_1: enp0s3            |
+                  |         LAN_2: enp0s8            |
+                  +----------------------------------+
+
+                  
+
+|------------------------Arquivos de configuração de rede e explicação simples das VMS------------------------|
+
+1-(METASPOTABLE): VM vulneravel propositalmente, utilizada para testes de segurança/redes.
+
+  - arquivo: /etc/networking/interfaces
+  - dai é só ir configurando a rede(definir ineterface,ip,máscara,e roteador(opcional por ser rede inetrna)).
+
+
+2-(Ubuntu Server): sistema operacional utilizado por servidores. é leve e confiável se configurado do jeito
+                   certo.
+
+  - arquivo: /etc/netplan/<arquivo> # o arquivo no ubunto server pode variar, por isso sempre conferir.
+  - depois é só seguir configurando a rede como na METASPOTABLE.
+
+3- Roteador/gateway: utilizado para comunicação externa a sua rede(outra LAN ou acessando a internet)
+                     - o roteador não fica com os dados, ele simplemte repassa para o ip de destino
+                       e retorna a resposta dele fazendo o caminho inevrso.
+
+  - arquivo(no Ubuntu server): /etc/netplan/<arquivo>
+  - no roteador, você tem que definir 2 interfaces de rede no seu virtualuizador(eu utilizei Vitual box)
+     nomeu caso, é a "rede interna".
+  - isso é nencessário para o roteador fazer o repasse de dados entre redes. sem isso, não tem como repassar
+     as informações.
+
+resumo: configure as VMS cleintes em redes diferentes, tenha uma VM específica pro roteamento, configure
+        o roteador com 2 adaptadores de rede/interface(da cliente 1 e 2),teste e salve com snapshots em todas.
+    
+  
+                   
+    
+  
+  
+
+
+
+
+
+                  
+
+
+
+  
