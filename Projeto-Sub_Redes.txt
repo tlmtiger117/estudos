@@ -5,7 +5,7 @@ Fluxo do funcionamento da rede virtual inetrna:
 
    LAN_1 (Metaspotable)                       LAN_2(ubuntu server)                            
 +------------------------+                  +------------------------+
-|rede: enp0s3            |                  | rede: enp0s8           |
+| rede: enp0s3           |                  | rede: enp0s8           |
 | host: 192.168.1.2      |                  | host: 192.168.2.1      |
 | máscara: 255.255.255.0 |                  | máscara: 255.255.255.0 |
 | gateway: 192.168.1.1   |                  | gateway: 192.168.2.1   |
